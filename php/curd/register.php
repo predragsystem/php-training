@@ -2,10 +2,10 @@
 <?php 
 include('header.php'); 
 ?>
-<section class="p-3 p-md-4 p-xl-5">
+<section class="p-3 p-md-4 p-xl-5 d-flex justify-content-center">
 
-      <div class="col-12 col-md-6 bsb-tpl-bg-lotion">
-        <div class="p-3 p-md-4 p-xl-5 card shadow-lg bg-danger text-light">
+      <div class="col-12 col-md-6 bsb-tpl-bg-lotion ">
+        <div class="p-3 p-md-4 p-xl-5 card shadow-lg bg-danger text-light ">
           <div class="row">
             <div class="col-12">
               <div class="mb-5">
