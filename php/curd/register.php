@@ -1,8 +1,11 @@
 <!-- Registration 3 - Bootstrap Brain Component -->
+<?php 
+include('header.php'); 
+?>
 <section class="p-3 p-md-4 p-xl-5">
 
       <div class="col-12 col-md-6 bsb-tpl-bg-lotion">
-        <div class="p-3 p-md-4 p-xl-5">
+        <div class="p-3 p-md-4 p-xl-5 card shadow-lg bg-danger text-light">
           <div class="row">
             <div class="col-12">
               <div class="mb-5">
@@ -11,6 +14,7 @@
               </div>
             </div>
           </div>
+          <div class="card-body">
           <form action="save.php" method="post">
             <div class="row gy-3 gy-md-4 overflow-hidden">
               <div class="col-12">
@@ -30,7 +34,7 @@
               </div>
             </div>
           </form>
-         
+         </div>
         
       </div>
     </div

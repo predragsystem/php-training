@@ -1,5 +1,7 @@
 <!-- Registration 3 - Bootstrap Brain Component -->
-<?php 
+<?php
+include('header.php'); 
+
 include('connection.php');
 if(!isset($_GET['id'])){
 die("Invalid ID");
