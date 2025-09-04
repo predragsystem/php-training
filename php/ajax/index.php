@@ -30,7 +30,7 @@
         <form action="">
               <div class="row gy-3 gy-md-4 overflow-hidden">
                 <div class="col-12">
-
+                  <input type="hidden" id="action" name="action" value="add">
                   <label for="firstName" class="form-label">First Name <span class="text-danger">*</span></label>
                   <input type="text" data-id="fname-1" class="form-control" name="firstName" id="firstName" placeholder="First Name" required>
                    <p id="error-fname"></p>

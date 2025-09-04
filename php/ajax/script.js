@@ -4,10 +4,17 @@ $(document).ready(function(){
          if(name == ""){
             $("#firstName").addClass("boxerror");
             $("#error-fname").html("<strong>Please Enter First name</strong>").addClass("error");
-           
+            return true;
          }
          var data = $("form").serializeArray();
-         console.log(data)
+         $.ajax({
+            url: 'ajax.php',
+            data : data,
+            method: "POST",
+            success: function(){
+
+            }
+         });
     });
 
     
