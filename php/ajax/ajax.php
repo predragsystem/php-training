@@ -1,6 +1,6 @@
 <?php
 include('connection.php');
-$action = ($_POST['action']) ? $_POST['action'] : 'NA';
+$action = ($_REQUEST['action']) ? $_REQUEST['action'] : 'NA';
 switch($action){
     case 'add':
         $name = $_POST['firstName']." ".$_POST['lastName'];
@@ -24,6 +24,24 @@ switch($action){
         }
         header('Content-Type: application/json');
         echo json_encode($json);
-        break;
-    
+    break;
+
+    case 'view':
+        $sqlView = "SELECT * FROM user";
+        $stmt= $conn->query($sqlView);
+        $users = $stmt->fetchAll();
+        if($users){
+            $html = "";
+            foreach ($users as $user) {
+                $html .="<tr><td>".$user['name']."</td><td>".$user['email']."</td></tr>";
+            }
+            $json = [
+                'status' => 'success',
+                'data' => $html 
+               ,
+            ];
+        }
+
+         header('Content-Type: application/json');
+        echo json_encode($json);
 }

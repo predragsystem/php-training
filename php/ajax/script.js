@@ -1,4 +1,5 @@
 $(document).ready(function(){
+   getUserlist();
     $("button#registration").click(function(){
          let name = $("#firstName").val();
          if(name == ""){
@@ -16,6 +17,7 @@ $(document).ready(function(){
               // $("#message").html(res)
                if(res.status == "success"){
                   $("#message").html(res.message).addClass("alert alert-success");
+                  getUserlist();
                } else {
                    $("#message").html(res.message).addClass("alert alert-danger");
                }
@@ -25,7 +27,19 @@ $(document).ready(function(){
     });
 
     
-        
+      function getUserlist(){
+         $.ajax({
+            url: 'ajax.php',
+            data : {action : "view"},
+            method: "GET",
+            success: function(res){
+               console.log(res);
+              if(res.status == "success"){
+                  $("#userlist tbody").html(res.data);
+               } 
+            }
+         });
+      } 
     
    
 })

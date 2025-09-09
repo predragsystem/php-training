@@ -10,13 +10,30 @@
     <title>AJAX CRUD</title>
   </head>
   <body>
-    <h1>User List</h1>
+<div class="container">
+    <h1></h1>
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" 
     data-bs-target="#registerModal">
   Add Account
 </button>
+  <div class="card">
+    <div class="card-header">
+      <h3 class="card-title">User List</h3>
+    </div>
+    <div class="card-body">
+        <table class="table table-bordered" id="userlist">
+          <thead>
+            <th>Name</th>
+            <th>Email</th>
+            <th></th>
+          </thead>
+          <tbody>
 
-
+          </tbody>
+        </table>
+    </div>
+  </div>
+</div>
 
 <!-- Modal -->
 <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
